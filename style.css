@@ -1,0 +1,160 @@
+:root{
+    --color-bar:#e6e6e6;
+    --color-bar-links: #000;
+    --color-bar-box-links:#9b9b9b;
+    --color-sections-syntaxis:#e4e4e4;
+    --color-background:rgb(240, 240, 240);
+}
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Roboto Mono', monospace;
+    
+
+  }
+  
+  #main-doc{
+    display:grid;
+    grid-template-columns:1fr 0.3fr 1fr 1fr 1fr 0.3fr;
+    background-color: var(--color-background);
+    
+  }
+
+  #navbar{
+    display: grid;
+    display: block;
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:1 ;
+    background-color: var(--color-bar);
+  
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--color-bar-links);
+    font-weight: bold;
+    cursor: pointer;     
+    z-index: 100;
+    
+    margin: 7rem 2rem;
+  }
+  a:hover{
+    color: #9b9b9b;
+
+  }
+
+  li{
+    text-decoration: none;
+    color:var(--color-bar-links) ;
+    margin: 5rem 1rem;
+   list-style: none;
+  }
+
+
+
+.navbar__header{
+    color: var(--color-bar-links);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}  
+
+
+.sections{
+    display: grid;
+    margin-top: 2rem;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    color: #000;
+    font-weight:900;
+}
+
+p{
+  margin-bottom: 2rem;
+}
+
+h3{
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.sintaxis_box{
+    background-color: var(--color-sections-syntaxis) ;
+    margin-left: 2.5rem;
+    margin-top: .5rem;
+    width: 730px;
+    margin-bottom: 4rem;
+}
+header{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.footer{
+  height: 3rem;
+  background-color: var(--color-sections-syntaxis);
+  
+  margin-bottom: 0;
+}
+
+ 
+@media (max-width:1086px ){
+  #main-doc{
+    display:grid;
+   
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "navbar"
+    "content"
+    "footer";
+
+
+    
+   
+  }
+
+  #navbar{
+    display: grid;
+    
+    height: 10rem;
+    grid-area: navbar;
+    justify-content: start;
+    padding-bottom: .5rem;
+
+  }
+
+
+  li{
+    align-items: start;
+    display: contents;
+    font-size: 0.8rem;
+    align-items: left;
+
+  }
+
+  header{
+    font-size: 1.2rem;
+  }
+
+  .sintaxis_box{
+    width: 21rem;
+    margin-left: .5rem;
+  }
+  
+  .sections{
+    display: block;
+    grid-area: content;
+    font-size: 0.8rem;
+    justify-content: baseline;
+    margin-left: 1.2rem;
+  }
+  .footer{
+    grid-area: footer;
+  }
+  
+}

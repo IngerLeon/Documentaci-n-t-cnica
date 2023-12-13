@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main id="main-doc">
+
+			<main class="sections">
+  		<section class="main-section" id="introduccion">
+    		<header>Introducción</header>
+    			<p>La propiedad CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones
+						 y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional 
+						 a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.
+					</p>
+  		</section>  
+
+   		<section class="main-section" id="flex_basis">
+    		<header>flex-basis </header>
+    			<p>La propiedad de CSS flex-basis especifíca la base    flexible, la cual es el tamaño inicial de un elemento flexible.
+						 Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando box-sizing.
+					</p>
+    			<h3>Syntaxis</h3>
+    			<p class="sintaxis_box" class="sintaxis_box">
+						/* Especificar <'width'> */ <br>
+						flex-basis: 10em; <br>
+						flex-basis: 3px; <br>
+						flex-basis: auto; <br>
+ 						<br>
+						/* Palabras clave de dimensionamiento intrínseco */ <br>
+						flex-basis: fill; <br>
+						flex-basis: max-content; <br>
+						flex-basis: min-content; <br>
+						flex-basis: fit-content; <br>
+						<br>
+						/* Tamaño automático basado en el contenido del elemento flexible */ <br>
+						flex-basis: content; <br>
+
+						/* Global values */ <br>
+						flex-basis: inherit; <br>
+						flex-basis: initial; <br>
+						flex-basis: unset; <br>
+				</p>
+
+ 			 </section>  
+
+  		<section class="main-section" id="flex_direction">
+    		<header>flex-direction</header>
+    		<p>La propiedad CSS flex-direction especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).<br>
+      		Tenga en cuenta que el valor de row y row-reverse se verán afectados por la direccionalidad del contenedor flexible. Si su atributo dir es ltr, row representa el eje horizontal orientado de izquierda a derecha, y row-reverse desde la derecha hacia la izquierda; si el atributo dir es rtl, row representa el eje orientado de derecha a izquierda, y row-reverse de izquierda a derecha.
+    		</p>
+    		<h3>Syntaxis</h3>
+    		<p class="sintaxis_box">
+      		/* La dirección del texto se presenta en una línea */<br>
+					flex-direction: row;<br>
+					<br>
+					/* Como <row>, pero al revés */<br>
+					flex-direction: row-reverse;<br>
+					<br>
+					/* La dirección en la que se apilas las líneas de texto */<br>
+					flex-direction: column;<br>
+					<br>
+					/* Como <column>, pero al revés */<br>
+					flex-direction: column-reverse;<br>
+					<br>
+					/* Valores globales */<br>
+					flex-direction: inherit;<br>
+					flex-direction: initial;<br>
+					flex-direction: unset;<br>
+			</p>
+
+  		</section>
+
+   		<section class="main-section" id="flex_flow">
+    		<header>flex-flow</header>
+    			<p> La propiedad CSS flex-flow es una propiedad atajo para las propiedades individuales flex-direction y flex-wrap.
+      			<br>
+    			</p>
+    		<h3>Syntaxis</h3>
+    			<p class="sintaxis_box">/* flex-flow: <'flex-direction'> */<br>
+					flex-flow: row-reverse;<br>
+					flex-flow: row;<br>
+					flex-flow: column;<br>
+					flex-flow: column-reverse;<br><br>
+
+					flex-flow: nowrap;<br>
+					/* flex-flow: <'flex-wrap'> */<br>
+					flex-flow: wrap;<br>
+					flex-flow: wrap-reverse;<br><br>
+
+					/* flex-flow: <'flex-direction'> and <'flex-wrap'> */<br>
+					flex-flow: row nowrap;<br>
+					flex-flow: column wrap;<br>
+					flex-flow: column-reverse wrap-reverse;<br><br>
+
+					/* valores globales */<br>
+					flex-flow: inherit;<br>
+					flex-flow: initial;<br>
+					flex-flow: unset;<br>
+				</p>
+    
+  		</section>  
+
+   		<section class="main-section" id="flex_grow">
+    	<header>flex-grow</header>
+    	<p>La propiedad flex-grow de CSS especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex), en su dirección principal. El factor de crecimiento especifica qué cantidad del espacio restante dentro del contenedor flexible, debería ocupar el item en cuestión.
+				<br>
+				La dirección principal puede ser la altura o el ancho del elemento, dependiendo del valor de flex-direction.
+				<br>
+				El espacio restante es el tamaño del contenedor flexible menos el tamaño de todos los elementos flexibles juntos. Si todos los ítems dentro del contenedor tienen el mismo factor de crecimiento, todos los elementos reciben la misma cantidad del espacio restante. De lo contrario, el espacio restante se distribuye en función de los diferentes factores de crecimientos de cada item.</p>
+				<br>
+				</p>
+  		</section> 
+
+   <section class="main-section" id="flex_wrap">
+    <header>flex-wrap</header>
+    <p>La propiedad flex-wrap de CSS especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.</p>
+    <h3>Syntaxis</h3>
+    <p class="sintaxis_box">
+      flex-wrap: nowrap<br>
+	flex-wrap: wrap<br>
+	flex-wrap: wrap-reverse<br>
+
+	flex-wrap: inherit<br></p>
+  </section>  
+</main>
+<nav id="navbar">
+  <header class="navbar__header">Flex en CSS</header><br>
+
+<ul>
+  <li><a class="nav-link" href="#introduccion">Introduction</a></li>
+  <li><a class="nav-link" href="#flex_basis">flex-basis</a></li>
+  <li><a class="nav-link" href="#flex_direction">flex-direction</a></li>
+  <li><a class="nav-link" href="#flex_flow">flex-flow</a></li>
+  <li><a class="nav-link" href="#flex_grow">flex-grow</a></li>
+  <li><a class="nav-link" href="#flex_wrap">flex-wrap</a></li>
+
+
+</ul>
+</nav>
+ </main> 
+
+ <footer>
+	<p class="footer">
+		Creado por Inger León
+	</p>
+ </footer>
+
+</body>
+</html>
